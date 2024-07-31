@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ugonna family Secure Page</title>
+    <style>
+        body {
+            background-color: red;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="login-form">
+            <h1>Enter ugonna Security Code</h1>
+            <input type="text" id="security-code" placeholder="Security Code">
+            <button onclick="checkCode()"><a href="c:\Users\OWNER\Desktop\u\u.html">submit</a></button>
+        </div>
+        <div id="secure-content" class="hidden">
+            <h1>Welcome to the Secure Page</h1>
+            <p>This content is protected and visible only to authorized users.</p>
+        </div>
+    </div>
+
+    <script>
+        function checkCode() {
+            const enteredCode = document.getElementById('security-code').value;
+            const correctCode = 'ugonna234';
+            
+            if (enteredCode === correctCode) {
+                document.getElementById('login-form').classList.add('hidden');
+                document.getElementById('secure-content').classList.remove('hidden');
+            } else {
+                alert('Incorrect code. Please try again or tell ugonna to give you the correct code.');
+            }
+        }
+    </script>
+</body>
+</html>
